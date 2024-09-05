@@ -217,8 +217,8 @@ jobs:
 
       - name: Rebuild Lime (Windows)
         run: |
-          lime rebuild windows -32 -release -nocolor -verbose -nocffi
-          lime rebuild windows -64 -release -nocolor -verbose -nocffi
+          lime rebuild windows -32 -release -nocolor -verbose -nocffi 
+          lime rebuild windows -64 -DLIME_SDL_ANGLE -release -nocolor -verbose -nocffi
           lime rebuild hl -clean -release -nocolor -verbose -nocffi
 
       - uses: actions/upload-artifact@v4
